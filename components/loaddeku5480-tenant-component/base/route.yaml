@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loaddeku5480-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loaddeku5480-tenant-component
+    app.kubernetes.io/part-of: loaddeku5480-tenant-app
+  name: loaddeku5480-tenant-component
+  namespace: loaddeku5480-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loaddeku5480-tenant-component
+    weight: null
+status: {}
